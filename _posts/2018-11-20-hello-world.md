@@ -2,10 +2,9 @@
 title: Hello, world!
 categories: test
 ---
+{% include mathjax_support %}
 
 # Test post
-
-{% include mathjax_support %}
 
 Hello, world.
 
