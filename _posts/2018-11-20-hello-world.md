@@ -1,8 +1,8 @@
 ---
 title: Hello, world!
 categories: test
+math: true
 ---
-{% include mathjax_support %}
 
 # Test post
 

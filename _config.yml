@@ -35,6 +35,9 @@ defaults:
       layout: post
       permalink: /:categories/:title
 
+header_pages:
+  - about.md
+
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
