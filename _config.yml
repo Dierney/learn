@@ -17,7 +17,7 @@ title: Little Witch Academia
 email: rebuild@littlewitch.academy
 description: >- # this means to ignore newlines until "baseurl:"
   This is the real academia for science-fed people.
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/learn" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: jekyllrb
 github_username:  Shimogawa
