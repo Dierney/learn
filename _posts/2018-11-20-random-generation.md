@@ -226,7 +226,7 @@ public List<double> GenGamma()
 
         double fY = Math.Pow(y, 2.5) * Math.Exp(-y);
         double gY = 0.5 * Math.Exp(-y / 2);
-        if (fY / (M * gY) &gt;= unif)
+        if (fY / (M * gY) >= unif)
         {
             results.Add(y);
             valid++;
