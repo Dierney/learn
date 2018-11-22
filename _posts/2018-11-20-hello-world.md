@@ -1,6 +1,5 @@
 ---
 title: Hello, world!
-categories: test
 math: true
 ---
 

@@ -4,7 +4,11 @@
 
 @import "minima";
 
-// body {
-//     background: url("{{ site.base_url }}/learn/assets/img/c.jpg") no-repeat center center fixed !important;
-//     // background-size: cover !important;
-// }
+body {
+    background: url("{{ site.baseurl }}/assets/img/j.png") no-repeat center center fixed !important;
+    background-size: cover !important;
+}
+
+.entry-date {
+    color: gray;
+}
