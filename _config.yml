@@ -21,6 +21,7 @@ baseurl: "/learn" # the subpath of your site, e.g. /blog
 url: "https://shimogawa.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: jekyllrb
 github_username:  Shimogawa
+google_analytics: UA-129669107-1
 
 # Build settings
 markdown: kramdown
