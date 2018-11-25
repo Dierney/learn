@@ -1,0 +1,274 @@
+---
+title: 实分析作弊纸
+categories: math analysis
+author: Rebuild
+math: true
+---
+
+<h2 style="text-align: center">公式作弊纸</h2>
+
+<div>
+    <h3>0, 1 实数</h3>
+    <p>
+        <b>公理1.1：</b>$\newcommand{\P}{\mathbb{P}} \newcommand{\d}{\text{d}} \renewcommand{\R}{\mathbb{R}} \newcommand{\N}{\mathbb{N}} \newcommand{\Q}{\mathbb{Q}} \newcommand{\Z}{\mathbb{Z}}$$\N$是良序的，对于所有$\N$的非空子集$A$，$A$中必有最小元素。
+    </p>
+    <p>
+        <b>定理1.2：数学归纳法</b> 若$P(n)$是一系列命题，如果$P(1)$是真命题，并且如果$P(m)$是真命题能推导出$P(m+1)$是真命题，那么对所有的$n \in \N$，$P(n)$是真命题。
+    </p>
+    <p>
+        <b>定理1.3：</b>如果$A$和$B$是可数的，那么$A \times B$也是可数的。
+    </p>
+    <p>
+        <b>推论1.4：</b>$\Q$是可数的。
+    </p>
+    <p>
+        <b>定理1.5：（康托）</b>对于非空集$A$，$|A| &lt; |\mathcal{P}(A)|$，其中$\mathcal{P}(A)$是幂集。
+    </p>
+    <p>
+        <b style="color: red;">定理1.6：</b><b>确界原理</b> 如果$S$是有序集，那么对任意的非空子集$E \subset S$，如果$E$有上界，那么必有上确界，如果有下界，那么必有下确界。$\Q$不适用这个原理。
+    </p>
+    <p>
+        <b>定理1.7：</b>$\forall n \in \N, \forall x \in \R, x \ge 0, \exists ! y \ge 0$使得$y^n = x$。
+    </p>
+    <p>
+        <b style="color: red;">定理1.8：</b><b>阿基米德性质</b> $\forall x &gt; 0, y \in \R, \exists n \in \N$使得$nx > y$。
+    </p>
+    <p>
+        <b>推论1.9：稠密性</b> $\Q$在$\R$中稠密，即$\forall x &lt; y \in \R, \exists q \in \Q$使得$x &lt; q &lt; y$。
+    </p>
+    <p>
+        <b>定理1.10：</b>如果$S \subset \R$，并且$S$有上界，令$M = \sup S$，那么有$\forall \varepsilon > 0, \exists x \in S$使得$M - \varepsilon &lt; x &lt; M$。
+    </p>
+    <p>
+        <b>定理1.11：（三角不等式）</b>$|x+y| \le |x| + |y|$。$\big ||x|-|y| \big | \le |x-y|$。
+    </p>
+    <p>
+        <b>定理1.12：（康托）</b>$\R$是不可数的。
+    </p>
+    <br><br>
+    <hr>
+    <h3 class="in-text-subtitle">2 数列</h3>
+    <p>
+        <b style="color: red;">定义2.1：</b><b>数列收敛</b> 数列$x_n$趋向于或收敛于$x$的定义为$\forall \varepsilon > 0, \exists N \in \N$使得$|x_n - x| &lt; \varepsilon, \forall n \ge N$。
+    </p>
+    <p>
+        <b>定理2.2：</b>收敛数列有界，并且有且仅有一个极限。
+    </p>
+    <p>
+        <b>技巧2.3：</b>要证明数列不收敛，找到两个子列$\{\overline{x_{n_k}}\}$和$\{\widetilde{x_{n_k}}\}$使得这两个数列收敛于不同极限。
+    </p>
+    <p>
+        <b>推论2.4：</b>$x_n \rightarrow x$的充要条件是任意子列$\{x_{n_k}\}$也都收敛于$x$。
+    </p>
+    <p>
+        <b style="color: red;">定理2.5：</b>单调有界数列必定收敛。如果单调递增，那么$x_n \rightarrow \sup \{x_n\}$；如果单调递减，那么$x_n \rightarrow \inf \{x_n\}$。
+    </p>
+    <p>
+        <b>推论2.6：</b>如果集合$S$有上界，那么存在收敛数列$\{x_n\} \subset S$，并且$x_n \rightarrow \sup S$。
+    </p>
+    <p>
+        <b>命题2.7：</b>假设$x_n \rightarrow x$，$y_n \rightarrow y$。如果$x_n \le y_n$，那么$x \le y$。
+    </p>
+    <p>
+        <b style="color: red;">引理2.8：</b><b>夹逼定理</b> 假设$\{x_n\},\{y_n\},\{z_n\}$满足$x_n \le z_n \le y_n$。如果$x_n \to L$，$y_n \to L$，那么$z_n$也收敛于$L$。
+    </p>
+    <p>
+        <b style="color: red;">定理2.9：</b><b>比较审敛法</b> 令$a_n \ge 0$并且$a_n \to 0$。如果$\{x_n\}$对于足够大的$n$有$|x_n - x| \le a_n$，那么$\{x_n\}$收敛于$x$。
+    </p>
+    <p>
+        <b>命题2.10：</b>如果$x_n$无界并且单调递增/递减，那么$x_n \to \infty$或$x_n \to -\infty$。
+    </p>
+    <p>
+        <b style="color: red;">定理2.11：</b><b>比值审敛法</b> 对数列$\{x_n\}$，如果
+    </p>
+    <ol>
+        <li>
+            $\displaystyle \lim_{n\to \infty} \frac{|x_{n+1}|}{|x_n|} &lt; 1$，那么$x_n \to 0$。
+        </li>
+        <li>
+            $\displaystyle \lim_{n\to \infty} \frac{|x_{n+1}|}{|x_n|} &gt; 1$，那么$x_n$发散。
+        </li>
+        <li>
+            $\displaystyle \lim_{n\to \infty} \frac{|x_{n+1}|}{|x_n|} = 1$，那么收敛性不确定。
+        </li>
+    </ol>
+    <p>
+        <b style="color: red;">定理2.12：</b><b>BW</b> 所有在$\R$中的有界数列都有收敛子列。
+    </p>
+    <p>
+        <b>定理2.13：</b>如果数列$\{x_n\}$收敛，那么存在子列$\{\overline{x}_{n_k}\}$使得$\displaystyle \lim_{n \to \infty} \overline{x}_{n_k} = \limsup_{n \to \infty} x_n$。同样，也存在子列$\{\widetilde{x}_{n_k}\}$使得$\displaystyle \lim_{n \to \infty} \widetilde{x}_{n_k} = \liminf_{n \to \infty} x_n$。
+    </p>
+    <p>
+        <b>推论2.14：</b>如果$\{x_n\}$有界，那么$\{x_n\}$收敛的充要条件是$\liminf x_n = \limsup x_n$。
+    </p>
+    <p>
+        <b style="color: red;">定义2.15：</b><b>柯西数列</b> $\{x_n\}$是柯西数列，如果$\forall \varepsilon > 0, \exists N \in \N$使得$\forall n \ge N$和$m \ge N$，有$|x_n - x_m| &lt; \varepsilon$。
+    </p>
+    <p>
+        <b>定理2.16：</b>所有$\R$上的柯西数列都收敛。
+    </p>
+    <p>
+        <b style="color: red;">定义2.17：</b><b>级数收敛</b> 级数$\Sigma x_n$收敛的充要条件是部分和$\displaystyle S_n = \sum_{k=1}^n x_k$是收敛数列。
+    </p>
+    <p>
+        <b>定理2.18：p级数</b> p级数$x_n = n^{-p}, p > 1$收敛。调和级数$\displaystyle \sum \frac{1}{n}$发散。
+    </p>
+    <p>
+        <b style="color: red;">定理2.19：</b>如果$\Sigma x_n$收敛，那么$|x_n| \to 0$。如果$|x_n| \not \to 0$，那么$\Sigma x_n$发散。
+    </p>
+    <p>
+        <b>定理2.20：</b>如果级数绝对收敛，那么级数收敛。
+    </p>
+    <p>
+        <b style="color: red;">定理2.21：</b><b>交错级数审敛法</b> 如果$x_n \ge 0$并且$x_n$单调递减，$x_n \to 0$，那么$\Sigma (-1)^n x_n$收敛。
+    </p>
+    <p>
+        <b style="color: red;">定理2.22：</b><b>级数比值审敛法</b> 如果$x_n$是非零数列并且极限$\displaystyle L = \lim_{n \to \infty} \frac{|x_{n+1}|}{|x_n|}$存在，那么如果$L &lt; 1$，那么级数绝对收敛；如果$L > 1$，级数发散。
+    </p>
+    <p>
+        <b style="color: red;">定理2.23：</b><b>级数开根审敛法</b> 假设极限$L = \limsup \sqrt[n]{|x_n|}$存在。那么如果$L &lt; 1$，级数$\Sigma x_n$绝对收敛；如果$L>1$，那么级数发散。
+    </p>
+    <p>
+        <b style="color: red;">定理2.24：</b><b>幂级数</b> 幂级数$\Sigma a_n (x-x_0)^n$有收敛半径$\displaystyle R = \frac{1}{\displaystyle \limsup_{n \to \infty} \sqrt[n]{|a_n|}}$。如果存在，那么当$|x - x_0| &lt; R$时，级数绝对收敛；如果$|x-x_0| > R$，那么级数发散。等于的情况需要另行讨论。
+    </p>
+    <p>
+        <b>定理2.25：级数极限比较审敛法</b> 如果有$a_n \gt 0, b_n \gt 0$并且$\displaystyle 0 \lt \lim_{n \to \infty} \frac{a_n}{b_n} \lt \infty$，那么$\Sigma a_n$和$\Sigma b_n$同时收敛或发散。
+    </p>
+
+    <br><br>
+    <hr>
+    <h3 class="in-text-subtitle">3 连续函数</h3>
+    <p>
+        <b style="color: red;">定义3.1：</b><b>聚点</b> 设$S \subset \R$。$x \in \R$是$S$的一个聚点，如果$\forall \varepsilon > 0$，集合$(x-\varepsilon, x+\varepsilon) \cap S \backslash \{x\}$非空。
+    </p>
+    <p>
+        <b>定理3.2：</b>$x$是$S$的聚点的充要条件是$\exists \{x_n\} \subset S \backslash \{x\}$使得$\displaystyle \lim_{n \to \infty} x_n = x$。
+    </p>
+    <p>
+        <b style="color: red;">定义3.3：</b><b>函数极限</b> 设函数$f: S \to \R$。令$c \in \R$为$S$的一个聚点。如果有$\forall \varepsilon > 0, \exists \delta > 0$使得对所有的$|x-c| &lt; \delta, x \in S$都有$|f(x) - L| &lt; \varepsilon$，那么定义函数极限$\displaystyle L = \lim_{x \to c} f(x)$。注意，如果$L$存在，那么它唯一。
+    </p>
+    <p>
+        <b style="color: red;">定理3.4：</b>设$f:S \to \R$，$c$是$S$的一个聚点。那么$\displaystyle \lim_{x \to c} f(x) = L$的充要条件是$\forall \{x_n\} \subset S \backslash \{x\}$并且$x_n \to c$，都有$\displaystyle \lim_{n \to \infty} f(x_n) = L$。
+    </p>
+    <p>
+        <b>定理3.5：</b>函数极限存在的充要条件是双侧极限存在且相等。
+    </p>
+    <p>
+        <b style="color: red;">定义3.6：</b><b>连续性</b> 对于函数$f:S \to \R, c \in S$，如果有$\forall \varepsilon > 0, \exists \delta = \delta(\varepsilon, c) > 0$使得$\forall x \in S, |x - c| &lt; \delta$都有$|f(x) - f(c)| &lt; \varepsilon$，那么$f$在$c$连续。如果对所有$c \in S$，$f$都连续，那么我们说$f$在$S$上连续。
+    </p>
+    <p>
+        <b style="color: red;">定理3.7：</b>$f$在$c$连续的充要条件是$\forall x_n \to c, x_n \in S$，都有$f(x_n) \to f(c)$。
+    </p>
+    <p>
+        <b>推论3.8：</b>$f(x) = x^r, r \in \Q$是连续的。
+    </p>
+    <p>
+        <b>定理3.9：</b>若有$f: A \to B, g: B \to \R$，并且$f$在$c$连续，$g$在$f(c)$连续，那么复合函数$h = g \circ f : A \to \R$在$c$连续（$h(x) = g(f(x))$）。
+    </p>
+    <p>
+        <b style="color: red;">定理3.10：</b>如果存在数列$\{x_n\} \subset S$，$x_n \to c$但是$f(x_n) \not \to c$，那么$f$在$c$不连续。
+    </p>
+    <p>
+        <b style="color: red;">定理3.11：</b><b>最大最小值定理</b> 如果$f: [a,b] \to \R$是连续的，那么$f$有界，并且在$[a,b]$上有最大最小值。
+    </p>
+    <p>
+        <b style="color: red;">引理3.12：</b><b>零点定理</b> 如果$f: [a,b] \to \R$是连续的，并且$f(a) &lt; 0$，$f(b) > 0$，那么存在$c \in (a,b)$使得$f(c) = 0$。
+    </p>
+    <p>
+        <b style="color: red;">定理3.13：</b><b>介值定理，中间值定理</b> 如果$f:[a,b] \to \R$连续，并且存在$y$在$f(a)$和$f(b)$之间，那么存在$x_0 \in (a,b)$使得$f(x_0) = y$。
+    </p>
+    <p>
+        <b>推论3.14：</b>如果$f: [a,b] \to \R$是连续的，那么$f([a,b]) = [\inf f, \sup f]$。
+    </p>
+    <p>
+        <b>推论3.15：</b>所有奇数次多项式都有一个实根。
+    </p>
+    <p>
+        <b style="color: red;">定义3.16：</b><b>一致连续性</b> $f$在$S$上一致连续的定义是$\forall \varepsilon > 0, \exists \delta = \delta(\varepsilon) > 0$使得$\forall |x - y| &lt; \delta$都有$|f(x) - f(y)| &lt; \varepsilon$。
+    </p>
+    <p>
+        <b>定理3.17：</b>一致连续的函数是连续的。
+    </p>
+    <p>
+        <b>定理3.18：</b>如果$f:[a,b] \to \R$连续，那么$f$在$[a,b]$上一致连续。
+    </p>
+    <p>
+        <b>定理3.19：</b>如果$\{x_n\} \subset S$是柯西数列，并且$f$在$S$上一致连续，那么$\{f(x_n)\}$也是柯西数列。
+    </p>
+    <p>
+        <b>定理3.20：</b>一致连续性的推广略。（暂时）
+    </p>
+    <p>
+        <b style="color: red;">定义3.21：</b><b>利普希茨连续</b> 如果对于函数$f: S \to \R$，存在$M > 0$使得对于任意的$x,y \in S$，都有$|f(x) - f(y)| \le M |x-y|$，那么函数$f$是Lipschitz连续的。
+    </p>
+    <p>
+        <b>定理3.22：</b>Lipschitz连续函数是一致连续的。
+    </p>
+    <p>
+        <b style="color: red;">定义3.23：</b><b>单调性</b> 如果$f$满足$x \lt y \Rightarrow f(x) \le f(y)$，那么$f$是单调递增的。如果$f$满足$x \lt y \Rightarrow f(x) \ge f(y)$，那么$f$是单调递减的。严格递增递减是将等号去除的情况。
+    </p>
+    <p>
+        <b>定理3.24：</b>如果$I \subset \R$是一个区间，并且$f: I \to \R$是严格单调的，那么$f(I)$是一个区间的充要条件是$f$是连续的。
+    </p>
+    <p>
+        <b>定理3.25：</b>如果$f: I \to \R$是单调的，那么$f$有最多可数无穷个间断点（不连续点）。
+    </p>
+    <br><br>
+    <hr>
+    <h3 class="in-text-subtitle">4 导数</h3>
+    <p>
+        <b style="color: red;">定义4.1：</b><b>导数</b> 若函数$f:I \to \R$，$c \in I$是一个聚点。如果极限$\displaystyle L = \lim_{x \to c} \frac{f(x) - f(c)}{x-c}$存在，那么我们称$f$在$c$可导，并且$L$叫做$f$在$c$的导数，记作$f'(c) = L$。
+    </p>
+    <p>
+        <b>定理4.2：</b>可导必连续。
+    </p>
+    <p>
+        <b>定理4.3：链式法则</b> 若$f:I_1 \to I_2$在$c \in I_1$可导，$g:I_2 \to \R$在$f(c) \in I_2$可导，那么$g \circ f: I_1 \to \R$在$c$可导，并且导数$(g \circ f)'(c) = g'(f(c)) \cdot f'(c)$。
+    </p>
+    <p>
+        <b>定理4.4：</b>如果函数$f: I \to \R$在$c$可导，并且在$c$有局部极值，那么$f'(c) = 0$。
+    </p>
+    <p>
+        <b>定义4.5：</b>驻点指导数为$0$的点。
+    </p>
+    <p>
+        <b>定理4.6：</b>假设$f: [a,b) \to \R$是连续的并且在$(a,b)$上可导。如果$\displaystyle \lim_{x \to a^+} f'(x)$存在并等于$L$，那么说$f$在$a$可导，并且$f'(a) = L$。
+    </p>
+    <p>
+        <b style="color: red;">定理4.7：</b><b>罗尔定理</b> 假设$f: [a,b] \to \R$是连续的，并且在$(a,b)$上可导。如果$f(a) = f(b)$，那么存在$c \in (a,b)$使得$f'(c) = 0$。
+    </p>
+    <p>
+        <b style="color: red;">定理4.8：</b><b>中值定理</b> 假设$f: [a,b] \to \R$是连续的，并且在$(a,b)$上可导，那么存在$c \in (a,b)$使得$\displaystyle f'(c) = \frac{f(b) - f(a)}{b-a}$，或$f(b) - f(a) = f'(c)(b-a)$。
+    </p>
+    <p>
+        <b>推论4.9：</b>如果$f'(x) = 0, \forall x$，那么$f$是常值函数。如果$f'(x) \ge 0$，那么$f$单调递增。反之亦然。
+    </p>
+    <p>
+        <b>定理4.10：一阶导数测试</b> 假设$f:(a,b) \to \R$在$(a,b) \backslash \{c\}, c \in (a,b)$上是连续并可导的。如果在$(a,c)$上$f'(x) \le 0$，并且在$(c,b)$上$f'(x) \ge 0$，那么$f$在$c$有最小值。反之亦然。
+    </p>
+    <p>
+        <b style="color: red;">定理4.11：</b><b>洛必达法则</b> 假设$f,g:(a,b) \to \R$是可导的，$c \in (a,b)$。如果$f(c) = g(c) = 0, g'(x) \ne 0$，并且极限$\displaystyle L = \lim_{x \to c} \frac{f'(x)}{g'(x)}$存在，那么$\displaystyle \lim_{x \to c} \frac{f(x)}{g(x)} = L$。
+    </p>
+    <p>
+        <b style="color: red;">定理4.12：</b><b>达布中值定理</b> 假设$f:[a,b] \to \R$是可导的。如果有$y$在$f'(a)$和$f'(b)$之间，那么存在$c \in (a,b)$使得$f'(c) = y$。
+    </p>
+    <p>
+        <b style="color: red;">定理4.13：</b><b>泰勒展开</b> 假设$f:[a,b] \to \R$是$n$阶连续可导的并且$n+1$阶导数存在。给定$x_0 \in [a,b]$，对任意$x \ne x_0 \in [a,b]$，存在$c \in (a,b)$在$x$与$x_0$之间，使得
+        \[f(x) = P_n^{x_0}(x) + R_n^{x_0}(x),\]
+        其中$\displaystyle P_n^{x_0}(x) = \sum_{k=0}^n \frac{f^{(k)}(x_0)}{k!} (x-x_0)^k$称为泰勒多项式，$\displaystyle R_n^{x_0}(x) = \frac{f^{(n+1)}(c)}{(n+1)!} (x-x_0)^{n+1}$称为拉格朗日余项。
+    </p>
+    <p>
+        <b>定理4.14：二阶导数测试</b> 假设$f$在$(a,b)$上有二阶连续导数，并且$x_0 \in (a,b)$是一个驻点，即$f'(x_0) = 0$。如果$f''(x_0) \gt 0$，那么$f$在$x_0$是局部最小值。反之亦然。
+    </p>
+
+
+    <br><br>
+    <hr>
+    <h3 class="in-text-subtitle">5 黎曼积分</h3>
+    <p>
+        <b>定义5.1：划分</b> 如果有$a = x_0 < x_1 < ... < x_n = b$，那么称$P = \{x_0, x_1, ..., x_n\}$是在区间$[a,b]$上的一个划分，并且，记$\Delta x_i = x_i - x_{i-1}$。对于一个在这个划分上的函数$f(x)$，记$\displaystyle m_i = \inf_{[x_{i-1}, x_i]} f(x)$，$\displaystyle M_i = \sup_{[x_{i-1}, x_i]} f(x)$。
+    </p>
+    <p>
+        <b>定义5.2：上下达布和</b> 对于一个划分$P$，定义上达布和$\displaystyle U(P, f) = \sum_{i=1}^n M_i \Delta x_i$，和下达布和$\displaystyle L(P, f) = \sum_{i=1}^n m_i \Delta x_i$。
+    </p>
+</div>

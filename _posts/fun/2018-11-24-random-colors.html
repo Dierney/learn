@@ -1,0 +1,53 @@
+---
+title: 色图！！
+categories: fun
+author: Rebuild
+layout: ""
+---
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <title>色图！！</title>
+    <style>
+        .rand-color {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+    <script type="text/javascript">
+    function randomColor() {
+        var color = "";
+        for (var i = 0; i < 3; i++) {
+            var c = Math.floor(Math.random() * (0xff + 1)).toString(16);
+            color += c.length < 2 ? "0" + c : c;
+        }
+        document.getElementById("color-input").value = color;
+        changeColor(color);
+    }
+    function userChangeColor() {
+        var c = document.getElementById("color-input").value;
+        changeColor(c);
+    }
+    function changeColor(c) {
+        if (!/^[0-9a-f]{6}$/.test(c)) {
+            console.log("error");
+            return;
+        }
+        document.querySelector(".rand-color").style.backgroundColor = "#" + c;
+    }
+    </script>
+</head>
+<body class="rand-color">
+
+<div class="input-group" style="width: 50%">
+    <input id="color-input" type="text" class="form-control" placeholder="Color">
+    <button id="random-color" type="button" onclick="randomColor()" class="btn btn-success">随机颜色！</button>
+    <button id="generate-color" type="button" onclick="userChangeColor()" class="btn btn-warning">生成颜色！</button>
+</div>
+    
+</body>
+</html>
