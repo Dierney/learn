@@ -8,9 +8,9 @@ body {
     // background: url("{{ site.baseurl }}/assets/img/j.png") no-repeat center center fixed !important;
     // background-size: cover !important;
     background: url("{{ site.baseurl }}/assets/img/j.png") no-repeat center center fixed !important;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
+    // -webkit-background-size: cover;
+    // -moz-background-size: cover;
+    // -o-background-size: cover;
     // filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='{{ site.baseurl }}/assets/img/j.png', sizingMethod='scale');
     // -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='{{ site.baseurl }}/assets/img/j.png', sizingMethod='scale')";
     background-size: cover;
