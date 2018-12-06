@@ -13,9 +13,9 @@ body {
     // -o-background-size: cover;
     // filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='{{ site.baseurl }}/assets/img/j.png', sizingMethod='scale');
     // -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='{{ site.baseurl }}/assets/img/j.png', sizingMethod='scale')";
-    background-size: cover;
-    height: 100%;
-    // overflow: hidden;
+    background-size: cover !important;
+    height: 100% !important;
+    overflow: scroll;
 }
 
 .entry-date {
